@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main" class="page">
+      <div class="background"></div>
+      <div class="figure-1"></div>
+      <div class="logo">
+        <div class="figure-logo"></div>
+        <div class="player-name">Jordan Spieth</div>
+        <div class="score">Score: -1</div>
+        <div class="sponsor">Powered by:</div>
+        <div class="sponsor-logo">
+          <img src="./img/sponsor-002b.png" class="image3" />
+          
+        </div>
+      </div>
+
+      <div class="topbar">
+        <div
+          id="backout"
+          onclick="func('back')"
+          style="display: none; cursor: pointer"
+        >
+          
+          <ion-icon name="back-outline"></ion-icon>
+        </div>
+        <div
+          id="bac"
+          onclick="func('back')"
+          style="display: none; cursor: pointer"
+        >
+          Back
+        </div>
+        <div id="nav" class="navbar">
+          <ion-icon
+            name="close-outline"
+            style="
+              color: #959595;
+              float: right;
+              padding: 5px 10px;
+              font-size: 30px;
+              font-weight: bold;
+              opacity: 1;
+              cursor: pointer;
+            "
+            onclick="func('close')"
+          ></ion-icon>
+          <li
+            id="f1"
+            onclick="func('stats')"
+            style="
+              color: #26a2dc;
+              border-bottom: 3px solid #26a2dc;
+              font-weight: bold;
+              cursor: pointer;
+            "
+          >
+            Stats
+          </li>
+          <li id="f2" onclick="func('bio')" style="cursor: pointer">Bio</li>
+          <li id="f3" onclick="func('bag')" style="cursor: pointer">
+            In The Bag
+          </li>
+        </div>
+      </div>
+
+      <div id="stat" class="description-1" style="display: grid">
+        <div class="value1">
+          <div class="s1">Hole</div>
+          <div class="s2" onclick="func('hole15')" style="cursor: pointer">
+            <span>15&nbsp;</span>
+            <img
+              src="./img/golf-course.png"
+              class="image"
+            />
+          </div>
+
+          <div class="s3" onclick="func('hole16')" style="cursor: pointer">
+            <span>16&nbsp;</span>
+            <img
+              src="./img/golf-course.png"
+              class="image"
+            />
+          </div>
+          <div class="s4" onclick="func('hole17')" style="cursor: pointer">
+            <span>17&nbsp;</span>
+            <img
+              src="./img/golf-course.png"
+              class="image"
+            />
+          </div>
+          <div class="s5">
+            <span>18&nbsp;</span>
+            <!-- <img
+              src="https://cdn.edisn.ai/pga/v1.0/static/assets/img/golf-course.png"
+              class="image"
+            /> -->
+          </div>
+        </div>
+        <div class="value2">
+          <div class="s1">Par</div>
+          <div class="s2" onclick="func('holes')" style="cursor: pointer">
+            4
+          </div>
+          <div class="s3">4</div>
+          <div class="s4">4</div>
+          <div class="s5">3</div>
+        </div>
+        <div class="value3">
+          <div class="s1">Yard</div>
+          <div class="s2" onclick="func('holes')" style="cursor: pointer">
+            420
+          </div>
+          <div class="s3">430</div>
+          <div class="s4">380</div>
+          <div class="s5">250</div>
+        </div>
+        <div class="value4">
+          <div class="s1">Score</div>
+          <div class="s2" onclick="func('holes')" style="cursor: pointer">
+            4
+          </div>
+          <div
+            class="s3"
+            style="
+              border: 1px solid white;
+              padding: 0em 0em 0em 0em;
+              height: 20px;
+              align-self: center;
+              text-align: center;
+              margin-left: 20px;
+              width: 24px;
+              opacity: 1;
+            "
+          >
+            5
+          </div>
+          <div
+            class="s4"
+            style="
+              border: 1px solid white;
+              padding: 0em 0em 0em 0em;
+              text-align: center;
+              border-radius: 50%;
+              width: 22px;
+              height: 20px;
+              opacity: 1;
+              margin-left: 20px;
+            "
+          >
+            3
+          </div>
+          <div class="s5">5</div>
+        </div>
+      </div>
+      <div id="bios" class="description-2" style="display: none">
+        <div style="text-align: center">
+          <div style="padding: 0.3em 0em 0em 0em">Date of birth</div>
+          <div style="padding: 2.5em 0em 0em 0em">Place of Birth</div>
+        </div>
+        <div style="font-weight: bold">
+          <div style="padding: 0.3em 0em 0em 0em">: July 27, 1993 (age 27)</div>
+          <div style="padding: 2.5em 0em 0em 0em">: Dallas, Texas, U.S.</div>
+        </div>
+        <div style="text-align: center">
+          <div style="padding: 0.3em 0em 0em 0em">Height</div>
+          <div style="padding: 2.5em 0em 0em 0em">Weight</div>
+        </div>
+        <div style="font-weight: bold">
+          <div style="padding: 0.3em 0em 0em 0em">: 1.85 m</div>
+          <div style="padding: 2.5em 0em 0em 0em">: 79 kg</div>
+        </div>
+      </div>
+      <div id="bags" class="description-3" style="display: none">
+        <div>
+          <ion-icon name="back-outline"></ion-icon>
+        </div>
+        <div>
+          <div>
+            <span>Home Jersey</span>
+            <span>$39.90</span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span>Home Jersey</span>
+            <span>$40.10</span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span>Home Jersey</span>
+            <span>$27.20</span>
+          </div>
+        </div>
+        <div>
+          <ion-icon name="forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div id="ball1" class="description-4" style="display: none">
+        <div>
+          <ion-icon name="back-outline"></ion-icon>
+        </div>
+        <div>
+          <img
+            src="./img/golf-ball.png"
+            class="img"
+          />
+        </div>
+        <div>240 yards</div>
+        <div>
+          <img
+            src="./img/arrow.png"
+            class="img1"
+          />
+        </div>
+        <div>Left Fairway</div>
+        <div>
+          <img
+            src="./img/arrow.png"
+            class="img1"
+          />
+        </div>
+        <div>130 yards</div>
+        <div>Green Side Bunker</div>
+        <div>
+          <img
+            src="./img/arrow.png"
+            class="img1"
+          />
+        </div>
+        <div>60 yards</div>
+        <div>Green</div>
+        <div>
+          <img
+            src="./img/arrow.png"
+            class="img1"
+          />
+        </div>
+        <div>4 yards</div>
+        <div>
+          <img
+            src="./img/golf-course.png"
+            class="img2"
+          />
+        </div>
+        <div>Birdie</div>
+        <div>
+          <ion-icon name="forward-outline"></ion-icon>
+        </div>
+        <div>
+          <span style="align-self: center">15th Hole</span>
+        </div>
+      </div>
+      <div id="ball2" class="description-5" style="display: none">
+        <div>
+          <ion-icon name="back-outline"></ion-icon>
+        </div>
+        <div>
+          <img
+            src="./img/golf-ball.png"
+            class="img"
+          />
+        </div>
+        <div>240 yards</div>
+        <div>
+          <img
+            src="./img/arrow.png"
+            class="img1" style="width: 70px;"
+          />
+        </div>
+        <div>Left Fairway</div>
+        <div>
+          <img
+            src="./img/arrow.png"
+            class="img1" style="width: 70px;"
+          />
+        </div>
+        <div>4 yards</div>
+        <div>
+          <img
+            src="./img/golf-course.png"
+            class="img2"
+          />
+
+        </div>
+        <div>Birdie</div>
+        <div>
+          <ion-icon name="forward-outline"></ion-icon>
+        </div>
+        <div>
+          <span style="align-self: center">16th Hole</span>
+        </div>
+        
+        </div>
+        <div id="ball3" class="description-6" style="display: none">
+          <div>
+            <ion-icon name="back-outline"></ion-icon>
+          </div>
+          <div>
+            <img
+              src="./img/golf-ball.png"
+              class="img"
+            />
+          </div>
+          <div>240 yards</div>
+          <div>
+            <img
+              src="./img/arrow.png"
+              class="img1"
+            />
+          </div>
+          <div>Left Fairway</div>
+          <div>
+            <img
+              src="./img/arrow.png"
+              class="img1"
+            />
+          </div>
+          <div>130 yards</div>
+          <div>Green Side Bunker</div>
+          <div>
+            <img
+              src="./img/arrow.png"
+              class="img1"
+            />
+          </div>
+          <div>60 yards</div>
+          <div>Green</div>
+          <div>240 yards</div>
+          <div>
+            <img
+              src="./img/arrow.png"
+              class="img1"
+            />
+          </div>
+          <div>Left Fairway</div>
+          <div>
+            <img
+              src="./img/arrow.png"
+              class="img1"
+            />
+          </div>
+          <div>60 yards</div>
+          <div>Green</div>
+          <div>
+            <img
+              src="./img/arrow.png"
+              class="img1"
+            />
+          </div>
+          <div>4 yards</div>
+          <div>
+            <img
+              src="./img/golf-course.png"
+              class="img2"
+            />
+          </div>
+          <div>Birdie</div>
+          <div>
+            <ion-icon name="forward-outline"></ion-icon>
+          </div>
+          <div>
+            <span style="align-self: center">17th Hole</span>
+          </div>
+    </div>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
